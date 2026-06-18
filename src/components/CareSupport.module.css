@@ -1,0 +1,306 @@
+/* Header Badge */
+.topNoticeBadge {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--kb-gray-200);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: var(--spacing-6);
+  background: var(--white);
+}
+
+.noticeLabel {
+  background-color: #FEF2F2;
+  color: #EF4444;
+  font-weight: 800;
+  font-size: 0.8rem;
+  padding: 6px 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.noticeDesc {
+  color: var(--kb-gray-700);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 14px;
+}
+
+/* Grids */
+.topGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-8);
+}
+
+@media (min-width: 992px) {
+  .topGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.bottomGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-8);
+  margin-top: var(--spacing-8);
+}
+
+@media (min-width: 992px) {
+  .bottomGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card Styling */
+.serviceCard {
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.borderYellow { border-top: 6px solid var(--kb-yellow); }
+.borderGray { border-top: 6px solid var(--kb-gray-200); }
+.borderBlue { border-top: 6px solid var(--accent); }
+.borderDark { border-top: 6px solid var(--kb-gray-900); }
+
+/* Hero Image on Top */
+.cardImageHero {
+  width: 100%;
+  height: 220px;
+  background-color: var(--kb-gray-50);
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .cardImageHero {
+    height: 180px;
+  }
+}
+
+.cardImageHero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.serviceCard:hover .cardImageHero img {
+  transform: scale(1.08);
+}
+
+.cardContent {
+  padding: var(--spacing-8);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .cardContent {
+    padding: var(--spacing-6);
+  }
+}
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-3);
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--kb-gray-950);
+  letter-spacing: -0.02em;
+}
+
+.cardSub {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-6);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.pointBadge {
+  background-color: #FEF2F2;
+  color: #EF4444;
+  font-weight: 800;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  border-radius: var(--radius-xs);
+}
+
+/* Internal Card contents */
+.timeBox {
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-5);
+  margin-bottom: var(--spacing-6);
+  border: 1px solid var(--kb-gray-100);
+}
+
+.timeHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--kb-gray-950);
+  margin-bottom: var(--spacing-1);
+}
+
+.timeDesc {
+  color: var(--kb-gray-500);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.listGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-6);
+}
+
+@media (min-width: 480px) {
+  .listGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.listTitle {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--kb-gray-400);
+  margin-bottom: var(--spacing-4);
+  text-transform: uppercase;
+}
+
+.checkList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  font-size: 0.95rem;
+  color: var(--kb-gray-800);
+  font-weight: 600;
+}
+
+.checkList li { 
+  display: flex; 
+  align-items: flex-start; 
+  gap: var(--spacing-3); 
+  line-height: 1.4; 
+}
+
+.checkList small { 
+  color: var(--kb-gray-500); 
+  font-weight: 400;
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+
+.checkListLight {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  font-size: 0.95rem;
+  color: var(--kb-gray-800);
+  margin-bottom: var(--spacing-6);
+  font-weight: 600;
+}
+
+.checkListLight li { 
+  display: flex; 
+  align-items: flex-start; 
+  gap: var(--spacing-3); 
+  line-height: 1.5; 
+}
+
+.greenIcon { color: #10B981; flex-shrink: 0; }
+.redIcon { color: #EF4444; flex-shrink: 0; }
+.grayCheck { color: var(--kb-gray-300); flex-shrink: 0; }
+
+.exampleText { 
+  display: block; 
+  font-size: 0.8rem; 
+  color: var(--kb-gray-500); 
+  margin-top: 6px; 
+  font-weight: 400;
+}
+
+.bottomNote { 
+  font-size: 0.85rem; 
+  color: var(--kb-gray-500); 
+  margin-top: auto; 
+  padding-top: var(--spacing-6); 
+  border-top: 1px solid var(--kb-gray-100); 
+  font-weight: 500;
+}
+
+/* Vertical Steps UI (Based on user screenshot) */
+.verticalStepsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.stepBox {
+  width: fit-content;
+  min-width: 60px;
+  background-color: var(--kb-gray-50);
+  border-radius: var(--radius-sm);
+  padding: 4px 16px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--kb-gray-950);
+  border: 1px solid transparent;
+}
+
+.stepHighlightBorder {
+  border: 2px solid var(--kb-yellow);
+  background-color: var(--white);
+}
+
+.stepHighlightSolid {
+  background-color: var(--kb-yellow);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.stepTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--kb-gray-950);
+  padding-left: 2px;
+}
+
+.processIcon { 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: #3B82F6;
+  color: white;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-right: 8px;
+}

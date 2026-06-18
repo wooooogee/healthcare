@@ -1,0 +1,109 @@
+.section {
+  background-color: var(--bg-secondary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-6);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.sideCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--kb-gray-200);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-3) var(--spacing-4);
+  border-bottom: 1px solid var(--kb-gray-100);
+  background-color: var(--kb-gray-50);
+}
+
+.icon {
+  color: var(--kb-gray-900);
+}
+
+.cardHeader h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--kb-gray-800);
+}
+
+.cardBody {
+  padding: var(--spacing-4);
+}
+
+.alertBg {
+  background-color: #fffaf0; /* Light orange tint */
+}
+
+.diseaseList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.diseaseList li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.diseaseList strong {
+  font-size: 0.95rem;
+  color: var(--kb-yellow-hover);
+}
+
+.diseaseList span {
+  font-size: 0.85rem;
+  color: var(--kb-gray-700);
+}
+
+.smallNote {
+  font-size: 0.85rem;
+  color: var(--kb-gray-600);
+  line-height: 1.5;
+  margin-top: var(--spacing-2);
+}
+
+.familyGrid {
+  display: flex;
+  gap: var(--spacing-3);
+  font-size: 0.85rem;
+}
+
+.allowed, .denied {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  flex: 1;
+}
+
+.allowed span {
+  color: #10B981; /* Green */
+  font-weight: 600;
+}
+
+.denied span {
+  color: #EF4444; /* Red */
+}

@@ -1,0 +1,118 @@
+.section {
+  background-color: var(--white);
+}
+
+.stepperContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+@media (min-width: 768px) {
+  .stepperContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+
+.iconCircle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: var(--white);
+  border: 3px solid var(--kb-gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--kb-gray-600);
+  margin-bottom: var(--spacing-4);
+  z-index: 2;
+  position: relative;
+}
+
+.iconActive {
+  background-color: var(--kb-yellow);
+  border-color: var(--kb-yellow);
+  color: var(--kb-gray-900);
+}
+
+.badge {
+  background-color: var(--kb-gray-600);
+  color: var(--white);
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 4px;
+  margin-bottom: var(--spacing-2);
+}
+
+.badgeActive {
+  background-color: var(--kb-gray-900);
+}
+
+.step h4 {
+  font-size: 1rem;
+  margin-bottom: var(--spacing-1);
+}
+
+.step p {
+  font-size: 0.85rem;
+  color: var(--kb-gray-600);
+}
+
+.connector {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .connector {
+    display: block;
+    flex: 1;
+    height: 3px;
+    background-color: var(--kb-gray-200);
+    margin-top: 36px;
+    min-width: 40px;
+    z-index: 1;
+  }
+}
+
+.alertBox {
+  margin-top: var(--spacing-12);
+  background-color: var(--kb-yellow-light);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-4);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alertIcon {
+  color: var(--kb-yellow-hover);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.alertBox strong {
+  display: block;
+  margin-bottom: var(--spacing-1);
+  color: var(--kb-gray-900);
+}
+
+.alertBox p {
+  color: var(--kb-gray-800);
+  font-size: 0.95rem;
+}

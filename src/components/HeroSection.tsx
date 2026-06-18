@@ -7,7 +7,7 @@ const HeroSection: React.FC = () => {
       <div className={styles.overlay}></div>
       <div className={`container ${styles.content}`}>
         <div className={`fade-in-up ${styles.textContent}`}>
-          <div className={`${styles.badge} ${styles.largeBadge}`}>KB LIFE & HEALTHCARE</div>
+          <div className={`${styles.badge} ${styles.largeBadge}`}>HEALTHCARE</div>
           <h1 className="heading-1">
             더좋은라이프와 함께하는<br/>
             <span className={styles.highlight}>건강한 미래 라이프케어</span>
